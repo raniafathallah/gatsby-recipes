@@ -8,6 +8,17 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [`gatsby-plugin-styled-components`],
-
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+  ],
 }
