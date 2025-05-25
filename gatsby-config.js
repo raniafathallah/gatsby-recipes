@@ -21,7 +21,7 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     }
-    ,{
+    //,{
     // resolve: "gatsby-source-wordpress",
     // options: {
     //   /*
