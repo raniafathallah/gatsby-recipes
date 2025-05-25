@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: "/gatsby-wordpress-site",
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
@@ -28,8 +29,8 @@ module.exports = {
        * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
        */
       // url: "http://karly.ct.ws/graphql",
-      // url: "http://localhost:10053/graphql",
-      url:process.env.API_URL
+      url: "http://localhost:10053/graphql",
+      // url:process.env.API_URL
   
     },
   }
