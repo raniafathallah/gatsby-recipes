@@ -155,7 +155,7 @@ const MegaMenuTitle = styled.div`
 
 const MegaMenuLink = styled.a`
   color: #234;
-  
+
   text-decoration: none;
   padding: 0.2em 0;
   border-radius: 3px;
@@ -222,7 +222,7 @@ const Menus=()=> {
   const menuItems = [
     {
       label: "Home",
-      href: "/",
+      href: "/gatsby-recipes",
       type: "normal",
     },
     {
@@ -268,12 +268,12 @@ const Menus=()=> {
  
     {
       label: "About",
-      href: "/about",
+      href: "/gatsby-recipes/about",
       type: "normal",
     },
     {
       label: "BLog",
-      href: "/blog",
+      href: "/gatsby-recipes/blog",
       type: "normal",
     },
   ];
