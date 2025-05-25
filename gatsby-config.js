@@ -27,8 +27,8 @@ module.exports = {
        * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
        * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
        */
-      url: "http://karly.ct.ws/graphql",
-      // url: "http://localhost:10053/graphql",
+      // url: "http://karly.ct.ws/graphql",
+      url: "http://localhost:10053/graphql",
   
     },
   }
