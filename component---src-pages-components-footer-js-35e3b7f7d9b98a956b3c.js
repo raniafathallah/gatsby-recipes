@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[215],{6590:function(e,t,l){l.r(t);var r=l(7294);t.default=()=>r.createElement("div",null,"Footer")}}]);
+//# sourceMappingURL=component---src-pages-components-footer-js-35e3b7f7d9b98a956b3c.js.map
