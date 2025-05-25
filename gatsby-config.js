@@ -22,20 +22,20 @@ module.exports = {
       },
     }
     ,
-  //   {
-  //   resolve: "gatsby-source-wordpress",
-  //   options: {
-  //     // url: "http://karly.ct.ws/graphql",
-  //     url: "http://localhost:10053/graphql",
-  //     schema: {
-  //       timeout: 1000000,
-  //       perPage: 10,
-  //       requestConcurrency: 5,
-  //     },
-  //     // url:process.env.API_URL
+    {
+    resolve: "gatsby-source-wordpress",
+    options: {
+      url: "http://karly.ct.ws/graphql",
+      // url: "http://localhost:10053/graphql",
+      schema: {
+        timeout: 1000000,
+        perPage: 10,
+        requestConcurrency: 5,
+      },
+      // url:process.env.API_URL
   
-  //   },
-  // }
+    },
+  }
 
   ],
 }
