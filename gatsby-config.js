@@ -28,6 +28,7 @@ module.exports = {
        * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
        */
       url: "http://karly.ct.ws/graphql",
+      // url: "http://localhost:10053/graphql",
   
     },
   }
