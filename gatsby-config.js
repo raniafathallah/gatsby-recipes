@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/gatsby-wordpress-site",
+  pathPrefix: "/gatsby-recipes",
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
@@ -30,6 +30,11 @@ module.exports = {
        */
       // url: "http://karly.ct.ws/graphql",
       url: "http://localhost:10053/graphql",
+      schema: {
+        timeout: 1000000,
+        perPage: 10,
+        requestConcurrency: 5,
+      },
       // url:process.env.API_URL
   
     },
