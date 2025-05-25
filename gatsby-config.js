@@ -25,8 +25,8 @@ module.exports = {
     {
     resolve: "gatsby-source-wordpress",
     options: {
-      url: "http://karly.ct.ws/graphql",
-      // url: "http://localhost:10053/graphql",
+      // url: "http://karly.ct.ws/graphql",
+      url: "http://localhost:10053/graphql",
       schema: {
         timeout: 1000000,
         perPage: 10,
