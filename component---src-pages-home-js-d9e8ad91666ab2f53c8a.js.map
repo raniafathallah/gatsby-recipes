@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-home-js-d9e8ad91666ab2f53c8a.js","mappings":"kKAQA,UANaA,IAETC,EAAAA,cAAA,WAAK,O","sources":["webpack://gatsby-starter-hello-world/./src/pages/home.js"],"sourcesContent":["import React from 'react'\n\nconst home = () => {\n  return (\n    <div>home</div>\n  )\n}\n\nexport default home"],"names":["home","React"],"sourceRoot":""}
