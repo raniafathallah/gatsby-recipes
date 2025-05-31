@@ -35,7 +35,7 @@ const blog = ({data}) => {
 {data.allWpRecipe.nodes.map((item, index) => (
 <div className='rec-item'>
 {/* src={"http://localhost:8001"+item.image}  */}
-<img  className='rec-img'  src={"/gatsby-recipes/"+item.image} alt="A dinosaur"  loading="lazy"/>
+<img  className='rec-img'  src={"/gatsby-recipes"+item.image} alt="A dinosaur"  loading="lazy"/>
 
         <span key={index}> <Link  className="rec-title" to={"/recipes/"+item.slug}> {item.title}  </Link>  </span>
    
