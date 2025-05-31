@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { StaticImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby";
 // import logo from "../assets/images/logo.png"
  
 // Styled components
@@ -213,7 +214,19 @@ const SearchInput = styled.input`
   }
 `;
 
-const Menus=()=> {
+
+
+export const query = graphql`{
+  allWpCategory {
+   nodes {
+     id
+     name
+     slug
+   }
+ }
+}`
+
+const Menus=({data})=> {
   // Dropdown states
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -225,47 +238,6 @@ const Menus=()=> {
       href: "/gatsby-recipes",
       type: "normal",
     },
-    {
-      label: "Products",
-      type: "mega",
-      content: (
-        <MegaMenuGrid>
-          <MegaMenuSection>
-            <MegaMenuTitle>Category 1</MegaMenuTitle>
-            <MegaMenuLink href="#">Product 1</MegaMenuLink>
-            <MegaMenuLink href="#">Product 2</MegaMenuLink>
-            <MegaMenuLink href="#">Product 3</MegaMenuLink>
-          </MegaMenuSection>
-          <MegaMenuSection>
-            <MegaMenuTitle>Category 2</MegaMenuTitle>
-            <MegaMenuLink href="#">Product 4</MegaMenuLink>
-            <MegaMenuLink href="#">Product 5</MegaMenuLink>
-            <MegaMenuLink href="#">Product 6</MegaMenuLink>
-          </MegaMenuSection>
-        </MegaMenuGrid>
-      ),
-    },
-    {
-      label: "Gallery",
-      type: "mega",
-      content: (
-        <MegaMenuGrid>
-          <MegaMenuSection>
-            <MegaMenuTitle>Category 1</MegaMenuTitle>
-            <MegaMenuLink href="#">Product 1</MegaMenuLink>
-            <MegaMenuLink href="#">Product 2</MegaMenuLink>
-            <MegaMenuLink href="#">Product 3</MegaMenuLink>
-          </MegaMenuSection>
-          <MegaMenuSection>
-            <MegaMenuTitle>Category 2</MegaMenuTitle>
-            <MegaMenuLink href="#">Product 4</MegaMenuLink>
-            <MegaMenuLink href="#">Product 5</MegaMenuLink>
-            <MegaMenuLink href="#">Product 6</MegaMenuLink>
-          </MegaMenuSection>
-        </MegaMenuGrid>
-      ),
-    },
- 
     {
       label: "About",
       href: "/gatsby-recipes/about",
@@ -307,6 +279,7 @@ const Menus=()=> {
           ☰
         </Hamburger>
         <Menu open={menuOpen}>
+          
           {menuItems.map((item, idx) => (
             <MenuItem key={item.label}>
               {item.type === "normal" ? (
@@ -330,6 +303,7 @@ const Menus=()=> {
                   >
                     {item.type === "mega" ? (
                       item.content
+                      
                     ) : (
                       // Images dropdown
                       item.content.map((imgItem) => (
@@ -364,6 +338,7 @@ const Menus=()=> {
         <SearchInput type="text" placeholder="Search…" aria-label="Search" />
       </SearchContainer>
       */}
+      <br className="nav-bar"/>
     </NavbarContainer>
   );
 }

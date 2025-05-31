@@ -1,0 +1,93 @@
+/* import "tailwindcss/base.css"
+import "tailwindcss/components.css"
+import "tailwindcss/utilities.css" */
+
+body{
+     background-color: #fff;
+}
+.parent-container{
+    margin: 0px 15%;
+}
+.div-container{
+     width: 100%;
+     display: flex;
+     flex-flow: wrap;
+}
+.rec-img{
+     width:100%;
+     min-height: 200px;
+}
+.rec-item{
+     width: 23%;
+     margin: 1%;
+     background: #fff;
+     /* box-shadow: 2px 2px 3px #a09999; */
+     box-shadow:  0px 0px 3px #a09999
+
+}
+.rec-title{
+     color: #444;
+    font-weight: bold;
+}
+
+.myrecipe-title{
+     margin: 2%;
+     color: #444;
+}
+.myrecipe-prep
+{
+     color: #877979;
+     padding: 0px;
+     margin: 9px;
+}
+.text-center{
+     text-align: center;
+     width: 100%;
+}
+.myrecipe-note
+{
+     margin-left: 7%;
+     margin-top: 5%;
+}
+.myrecipe-note>p
+{
+     width: 95%;
+     max-width: 58em;
+     color: #444;
+     line-height: 1.4;
+}
+.myrecipe-note>h5
+
+{
+     color:#1c2b36;
+     font-weight: bold;
+}
+
+.App {
+     margin: 0px 15%;
+ }
+.main-sec{
+
+     display: flex;
+     margin: 5% 0px;
+
+}
+
+.main-sec>.img{
+     height: 600px;
+     width: 60%;
+     
+}
+.main-sec>.main-right{
+     width: 40%;
+     margin: 2% 5%;
+
+
+}
+.rec-item2{
+     width: auto;
+     box-shadow: none;
+     background: #fdf9f9;
+     padding: 3%;
+     border-bottom: 2px solid #eee;
+}

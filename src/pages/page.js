@@ -1,34 +1,38 @@
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
 import Layout from './components/Layout'
 import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 
+
+
 export const query = graphql`
   {
-    allWpRecipe {
-      nodes {
-        id
-        uri
-        title
-        slug
-        content
-        rating
-        preptime
-        image
-        note
-        ingredients
-        src
-      }
-    }
-  }
+     allWpRecipe(filter: {categories: {nodes: {elemMatch: {name: {eq: "diet"}}}}}) {
+          nodes {
+            id
+            image
+            note
+         }
+       }
+     }
 `
 
-const blog = ({data}) => {
 
+const Page = ({data}) => {
+     const [cat, setCat] = useState("")
+
+     useEffect(() => {
+       const params = new URLSearchParams(window.location.search)
+       setCat(params.get("cat"))
+     }, [])
+
+   
   return (
     <Layout> 
     <div className='parent-container'>
+<div>Query param "cat" is {cat}</div>
 
  
 <div className='div-container'>
@@ -47,7 +51,7 @@ const blog = ({data}) => {
   )
 }
 
-export default blog
+export default Page
 
 
 

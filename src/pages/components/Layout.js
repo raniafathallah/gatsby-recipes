@@ -6,6 +6,9 @@ import Footer from "./Footer"
 
 import "normalize.css"
 import "../../assets/css/main.css"
+import "../../assets/css/style.css"
+import "../../assets/css/footer.css"
+
 
 const Layout = ({ children }) => {
   return (
