@@ -17,7 +17,7 @@ export default function Post({ data }) {
            Prep Time: </strong> {post.preptime} minutes</h5>
         </div>
          
-          <img src={post.src}/>
+          <img src={"gatsby-recipes"+post.src}/>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
           
             <div className="myrecipe-note">
